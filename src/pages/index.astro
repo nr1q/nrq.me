@@ -1,16 +1,88 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+// import Hero from '../components/Hero.astro';
+// import Intro from '../components/Intro.astro';
+// import Works from '../components/Works.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+	<header class="hero">
+  	<img src="/nrq.jpg" alt="Enrique Mendoza">
+		<h1>Enrique<br> Mendoza</h1>
+		<p>Hello, I'm a developer specializing in frontend creating web-based solutions since 2010 — based in Mexico City, working remote.</p>
+		<p><a href="/contact">Let's create!</a></p>
+	</header>
+
+	<section class="works">
+  	<header>
+    	<h2>Works</h2>
+    	<!-- <a href="/works">Show more</a> -->
+  	</header>
+  	<div>
+			<!-- 	<article> -->
+			<!-- <h3>Casa Cantares</h3> -->
+			<!-- 		<time datetime="2025-10-08">2025</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Vives Consulting</h3> -->
+			<!-- 		<time datetime="2025-08-22">2025</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Vives Elevators</h3> -->
+			<!-- 		<time datetime="2025-08-08">2025</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Richmond Studio</h3> -->
+			<!-- 		<time datetime="2024-12-10">2024</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Colegio La Salle Pedregal</h3> -->
+			<!-- 		<time datetime="2024-08-28">2024</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Richmond Solution</h3> -->
+			<!-- 		<time datetime="2024-06-06">2024</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Richmond iRead</h3> -->
+			<!-- 		<time datetime="2024-05-27">2024</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Metrópoli Patriotismo</h3> -->
+			<!-- 		<time datetime="2024-02-06">2024</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Cherry Bomb Creative Co.</h3> -->
+			<!-- 		<time datetime="2023-07-03">2023</time> -->
+			<!-- 	</article> -->
+			<!-- 	<article> -->
+			<!-- <h3>Diversified Industries</h3> -->
+			<!-- 		<time datetime="2023-09-25">2023</time> -->
+			<!-- 	</article> -->
+			<article>
+				<h3>The Wall Patriotismo</h3>
+				<time datetime="2023-05-01">2023</time>
+			</article>
+			<article>
+				<h3>Richmond ELT</h3>
+				<time datetime="2021-10-19">2021</time>
+			</article>
+    	<article>
+    		<h3>FloorMuffler</h3>
+    		<time datetime="2021-04-08">2021</time>
+    	</article>
+  	</div>
+	</section>
+	
+	<section class="about">
+  	<header>
+    	<h2>About</h2>
+    	<!-- <a href="/about">Show more</a> -->
+  	</header>
+  	<div>
+  		<h3>I collaborate with businesses of all sizes worldwide, using the latest technologies.</h3>
+  		<img src="/nrq-at-cherrybomb-large.jpg" alt="Enrique Mendoza at Cherry Bomb" style={{width:'100%',height:'auto'}}>
+  		<p>I'm dedicated to crafting beautiful and highly funcional web-based applications, to achieve my clients' unique needs and long-term goals.</p>
+  	</div>
+	</section>
+</BaseLayout>
