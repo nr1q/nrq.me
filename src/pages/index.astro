@@ -1,88 +1,130 @@
 ---
+import '../styles/global.css';
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 // import Hero from '../components/Hero.astro';
 // import Intro from '../components/Intro.astro';
 // import Works from '../components/Works.astro';
+
+const latestWorks = [
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Casa Cantares',
+	// 	releaseDate: '2025-10-08',
+	// 	url: 'https://casacantares.mx/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Vives Consulting',
+	// 	releaseDate: '2025-08-22',
+	// 	url: 'https://vivesasociados.com/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Vives Elevators',
+	// 	releaseDate: '2025-08-08',
+	// 	url: 'https://viveselevators.com/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Richmond Studio',
+	// 	releaseDate: '2024-12-10',
+	// 	url: 'https://studio.richmondsolution.com/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Colegio La Salle Pedregal',
+	// 	releaseDate: '2024-08-28',
+	// 	url: 'https://sb.edu.mx/',
+	// },
+	{
+		imgSrc: '/images/richmond-solution.png',
+		name: 'Richmond Solution',
+		relaseDate: '2024-06-06',
+		url: 'https://richmondsolution.com/',
+	},
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Metrópoli Patriotismo',
+	// 	releaseDate: '2024-02-06',
+	// 	url: 'https://metropolipatriotismo.com/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Cherry Bomb Creative Co.',
+	// 	releaseDate: '2023-07-03',
+	// 	url: 'https://cherrybomb.com.mx/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Diversified Industries',
+	// 	releaseDate: '2023-09-25',
+	// 	url: 'https://diversifiedindustries.com/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'The Wall Patriotismo',
+	// 	releaseDate: '2023-05-01',
+	// 	url: 'https://thewallpatriotismo.com/',
+	// },
+	// {
+	// 	imgSrc: '',
+	// 	name: 'Richmond ELT',
+	// 	releaseDate: '2021-10-19',
+	// 	url: 'https://richmondelt.com/',
+	// },
+	{
+		imgSrc: '/images/floormuffler.png',
+		name: 'FloorMuffler',
+		releaseDate: '2021-04-08',
+		url: 'https://floormuffler.com/',
+	},
+];
 ---
 
 <BaseLayout>
-	<header class="hero">
-  	<img src="/nrq.jpg" alt="Enrique Mendoza">
-		<h1>Enrique<br> Mendoza</h1>
-		<p>Hello, I'm a developer specializing in frontend creating web-based solutions since 2010 — based in Mexico City, working remote.</p>
-		<p><a href="/contact">Let's create!</a></p>
+	<header class="container grid-cols-4 hero mt-20 py-10">
+		<img src="/images/nrq.jpg" alt="Enrique Mendoza" class="col-start-1 col-end-3 self-top rounded-full justify-end w-full mt-15 translate-x-8 -z-1">
+		<h1 class="col-start-3 col-span-2 flex flex-col items-start gap-1 lowercase font-display text-[12vw] leading-[0.75] mix-blend-soft-light -translate-x-2">
+			<span class="">Enrique</span>
+			 <span class="">Mendoza</span> <!-- -translate-x-[26px] -->
+			 <span class="">Frontend</span>
+			 <span class="">Developer</span>
+		</h1>
+		<div class="col-span-full flex gap-6 flex-col items-start mt-10">
+			<p class="text-justify text-2xl tracking-[-0.062rem] indent-[16vw]">Hello, I'm a web developer specializing in frontend crafting web-based experiences since 2010 — living in Mexico City, working remote.</p>
+			<p class="self-end"><a href="/contact" class="btn underline underline-offset-6 text-xl">Let's create!</a></p>
+		</div>
 	</header>
 
-	<section class="works">
-  	<header>
-    	<h2>Works</h2>
+	<section class="container works py-10">
+  	<header class="mb-8 py-2">
+    	<h2 class="subheading">Latest works</h2>
     	<!-- <a href="/works">Show more</a> -->
   	</header>
-  	<div>
-			<!-- 	<article> -->
-			<!-- <h3>Casa Cantares</h3> -->
-			<!-- 		<time datetime="2025-10-08">2025</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Vives Consulting</h3> -->
-			<!-- 		<time datetime="2025-08-22">2025</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Vives Elevators</h3> -->
-			<!-- 		<time datetime="2025-08-08">2025</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Richmond Studio</h3> -->
-			<!-- 		<time datetime="2024-12-10">2024</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Colegio La Salle Pedregal</h3> -->
-			<!-- 		<time datetime="2024-08-28">2024</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Richmond Solution</h3> -->
-			<!-- 		<time datetime="2024-06-06">2024</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Richmond iRead</h3> -->
-			<!-- 		<time datetime="2024-05-27">2024</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Metrópoli Patriotismo</h3> -->
-			<!-- 		<time datetime="2024-02-06">2024</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Cherry Bomb Creative Co.</h3> -->
-			<!-- 		<time datetime="2023-07-03">2023</time> -->
-			<!-- 	</article> -->
-			<!-- 	<article> -->
-			<!-- <h3>Diversified Industries</h3> -->
-			<!-- 		<time datetime="2023-09-25">2023</time> -->
-			<!-- 	</article> -->
-			<article>
-				<h3>The Wall Patriotismo</h3>
-				<time datetime="2023-05-01">2023</time>
-			</article>
-			<article>
-				<h3>Richmond ELT</h3>
-				<time datetime="2021-10-19">2021</time>
-			</article>
-    	<article>
-    		<h3>FloorMuffler</h3>
-    		<time datetime="2021-04-08">2021</time>
-    	</article>
+  	<div class="works_list flex flex-col gap-6">
+    	<figure>
+    		<img src="/images/floormuffler.png" alt="FloorMuffler">
+				<figcaption class="flex justify-between mt-1">
+    			<h3>FloorMuffler</h3>
+    			<time datetime="2021-04-08">2021</time>
+				</figcaption>
+    	</figure>
   	</div>
 	</section>
 	
-	<section class="about">
-  	<header>
-    	<h2>About</h2>
+	<section class="container about pt-10 pb-15">
+  	<header class="mb-8">
+    	<h2 class="subheading">About</h2>
     	<!-- <a href="/about">Show more</a> -->
   	</header>
   	<div>
-  		<h3>I collaborate with businesses of all sizes worldwide, using the latest technologies.</h3>
-  		<img src="/nrq-at-cherrybomb-large.jpg" alt="Enrique Mendoza at Cherry Bomb" style={{width:'100%',height:'auto'}}>
-  		<p>I'm dedicated to crafting beautiful and highly funcional web-based applications, to achieve my clients' unique needs and long-term goals.</p>
+  		<p class=" text-3xl text-justify mb-8">I collaborate with businesses of all sizes worldwide, implementing cutting-edge technologies.</p>
+			<figure class="mb-8">
+  			<img src="/images/nrq-at-cherrybomb.jpg" alt="Enrique Mendoza at Cherry Bomb" class="w-full">
+				<figcaption>*le me at <a href="https://cherrybomb.com.mx">Cherry Bomb</a>*</figcaption>
+			</figure>
+  		<p class="text-lg">I'm dedicated to building beautiful highly functional web solutions, to achieve my clients' unique needs and long-term goals.</p>
   	</div>
 	</section>
 </BaseLayout>

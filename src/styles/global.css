@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+@theme {
+  /* --font-display: 'Eloquia Display'; */
+  --font-display: 'Unytour', 'sans-serif';
+  --font-sans: 'FreeSans', 'sans-serif';
+  /* --font-mono: 'Lolito', 'sans-serif'; */
+
+  --breakpoint-sm: 30rem;
+
+  --color-primary-light: #efb63e;
+  --color-primary-normal: #d39223;
+  --color-primary-dark: #a56d12;
+
+  --color-secondary-light: #4f598d;
+  --color-secondary-dark: #293764;
+
+  --color-zinc-450: #7e7e92;
+}
+
+@layer components {
+  .container {
+    @apply grid px-5;
+  }
+
+  .btn {
+    @apply w-[5em];
+  }
+
+  .subheading {
+    @apply lowercase font-display text-3xl mix-blend-soft-light;
+
+    &::after {
+      content: '.';
+    }
+  }
+}
+

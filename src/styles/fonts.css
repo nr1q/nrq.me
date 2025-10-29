@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Lolito';
+  src: url('/fonts/lolito-mono-light-demo.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Unytour';
+  src: url('/fonts/unytour-semi-bold-condensed.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+
+@font-face {
+  font-family: 'FreeSans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/FreeSans.woff2') format('woff2'), url('/fonts/FreeSans.woff') format('woff');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/fonts/FreeSansOblique.woff2') format('woff2'), url('/fonts/FreeSansOblique.woff') format('woff');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/FreeSansBold.woff2') format('woff2'), url('/fonts/FreeSansBold.woff') format('woff');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  font-style: italic;
+  font-weight: bold;
+  src: url('/fonts/FreeSansBoldOblique.woff2') format('woff2'), url('/fonts/FreeSansBoldOblique.woff') format('woff');
+  font-display: block;
+}
