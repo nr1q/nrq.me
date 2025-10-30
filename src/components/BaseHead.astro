@@ -5,13 +5,13 @@ export interface Props {
   ogType?: string,
 };
 
-const { title, description, ogType = "website" } = Astro.props;
+const { title, description, ogType = 'website', image = '/images/nrq.jpg' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" sizes="any">
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
@@ -20,12 +20,12 @@ const { title, description, ogType = "website" } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<!-- <meta property="og:type" content={ogType} /> -->
+<meta property="og:type" content={ogType} />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:type" content={ogType} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
+<meta property="og:image" content={new URL(image, Astro.url)} />
 <!-- <meta property="og:image:alt" content=""> -->
 
 <!-- Twitter -->

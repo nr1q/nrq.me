@@ -7,30 +7,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // import Works from '../components/Works.astro';
 
 const latestWorks = [
-	// {
-	// 	imgSrc: '',
-	// 	name: 'Casa Cantares',
-	// 	releaseDate: '2025-10-08',
-	// 	url: 'https://casacantares.mx/',
-	// },
-	// {
-	// 	imgSrc: '',
-	// 	name: 'Vives Consulting',
-	// 	releaseDate: '2025-08-22',
-	// 	url: 'https://vivesasociados.com/',
-	// },
+	{
+		imgSrc: '/images/casa-cantares.png',
+		name: 'Casa Cantares',
+		releaseDate: '2025-10-08',
+		url: 'https://casacantares.mx/',
+	},
+	{
+		imgSrc: '/images/vives-consulting.png',
+		name: 'Vives Consulting',
+		releaseDate: '2025-08-22',
+		url: 'https://vivesasociados.com/',
+	},
 	// {
 	// 	imgSrc: '',
 	// 	name: 'Vives Elevators',
 	// 	releaseDate: '2025-08-08',
 	// 	url: 'https://viveselevators.com/',
 	// },
-	// {
-	// 	imgSrc: '',
-	// 	name: 'Richmond Studio',
-	// 	releaseDate: '2024-12-10',
-	// 	url: 'https://studio.richmondsolution.com/',
-	// },
+	{
+		imgSrc: '/images/richmond-studio.png',
+		name: 'Richmond Studio',
+		releaseDate: '2024-12-10',
+		url: 'https://studio.richmondsolution.com/',
+	},
 	// {
 	// 	imgSrc: '',
 	// 	name: 'Colegio La Salle Pedregal',
@@ -40,7 +40,7 @@ const latestWorks = [
 	{
 		imgSrc: '/images/richmond-solution.png',
 		name: 'Richmond Solution',
-		relaseDate: '2024-06-06',
+		releaseDate: '2024-06-07',
 		url: 'https://richmondsolution.com/',
 	},
 	// {
@@ -49,30 +49,30 @@ const latestWorks = [
 	// 	releaseDate: '2024-02-06',
 	// 	url: 'https://metropolipatriotismo.com/',
 	// },
-	// {
-	// 	imgSrc: '',
-	// 	name: 'Cherry Bomb Creative Co.',
-	// 	releaseDate: '2023-07-03',
-	// 	url: 'https://cherrybomb.com.mx/',
-	// },
-	// {
-	// 	imgSrc: '',
-	// 	name: 'Diversified Industries',
-	// 	releaseDate: '2023-09-25',
-	// 	url: 'https://diversifiedindustries.com/',
-	// },
-	// {
-	// 	imgSrc: '',
-	// 	name: 'The Wall Patriotismo',
-	// 	releaseDate: '2023-05-01',
-	// 	url: 'https://thewallpatriotismo.com/',
-	// },
-	// {
-	// 	imgSrc: '',
-	// 	name: 'Richmond ELT',
-	// 	releaseDate: '2021-10-19',
-	// 	url: 'https://richmondelt.com/',
-	// },
+	{
+	imgSrc: '/images/cherry-bomb-creative-co.png',
+		name: 'Cherry Bomb Creative Co.',
+		releaseDate: '2023-07-03',
+		url: 'https://cherrybomb.com.mx/',
+	},
+	{
+		imgSrc: '/images/diversified-industries.png',
+		name: 'Diversified Industries',
+		releaseDate: '2023-09-25',
+		url: 'https://diversifiedindustries.com/',
+	},
+	{
+		imgSrc: '/images/the-wall-patriotismo.png',
+		name: 'The Wall Patriotismo',
+		releaseDate: '2023-05-01',
+		url: 'https://thewallpatriotismo.com/',
+	},
+	{
+		imgSrc: '/images/richmond-elt.png',
+		name: 'Richmond ELT',
+		releaseDate: '2021-10-19',
+		url: 'https://richmondelt.com/',
+	},
 	{
 		imgSrc: '/images/floormuffler.png',
 		name: 'FloorMuffler',
@@ -84,7 +84,7 @@ const latestWorks = [
 
 <BaseLayout>
 	<header class="container grid-cols-4 hero mt-20 py-10">
-		<img src="/images/nrq.jpg" alt="Enrique Mendoza" class="col-start-1 col-end-3 self-top rounded-full justify-end w-full mt-15 translate-x-8 -z-1">
+		<img src="/images/nrq.jpg" alt="Enrique Mendoza" class="col-start-1 col-end-3 self-top justify-self-end rounded-full justify-end w-full max-w-[16rem] max- mt-15 translate-x-8 -z-1">
 		<h1 class="col-start-3 col-span-2 flex flex-col items-start gap-1 lowercase font-display text-[12vw] leading-[0.75] mix-blend-soft-light -translate-x-2">
 			<span class="">Enrique</span>
 			 <span class="">Mendoza</span> <!-- -translate-x-[26px] -->
@@ -93,23 +93,28 @@ const latestWorks = [
 		</h1>
 		<div class="col-span-full flex gap-6 flex-col items-start mt-10">
 			<p class="text-justify text-2xl tracking-[-0.062rem] indent-[16vw]">Hello, I'm a web developer specializing in frontend crafting web-based experiences since 2010 — living in Mexico City, working remote.</p>
-			<p class="self-end"><a href="/contact" class="btn underline underline-offset-6 text-xl">Let's create!</a></p>
+			<p class="self-end"><a href="mailto:info@nrq.me" data-href="/contact" class="btn underline underline-offset-6 text-xl">Let's create!</a></p>
 		</div>
 	</header>
 
 	<section class="container works py-10">
-  	<header class="mb-8 py-2">
+  	<header class="mb-4 py-2">
     	<h2 class="subheading">Latest works</h2>
     	<!-- <a href="/works">Show more</a> -->
   	</header>
-  	<div class="works_list flex flex-col gap-6">
-    	<figure>
-    		<img src="/images/floormuffler.png" alt="FloorMuffler">
-				<figcaption class="flex justify-between mt-1">
-    			<h3>FloorMuffler</h3>
-    			<time datetime="2021-04-08">2021</time>
-				</figcaption>
-    	</figure>
+  	<p class="mb-8">Click on the image to see my work in action, it will open in a new tab.</p>
+  	<div class="works_list grid gap-6 md:grid-cols-2">
+    	{ latestWorks.map((work) => (
+    		<a href={ work.url } target="_blank" rel="external nofollow" class="block">
+    			<figure>
+    				<img src={ work.imgSrc } alt="FloorMuffler">
+						<figcaption class="flex justify-between mt-1">
+    					<h3>{ work.name }</h3>
+    					<time datetime={ work.releaseDate }>{ work.releaseDate?.substring(0, 4) }</time>
+						</figcaption>
+    			</figure>
+    		</a>
+    	)) }
   	</div>
 	</section>
 	
