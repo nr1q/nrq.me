@@ -83,16 +83,16 @@ const latestWorks = [
 ---
 
 <BaseLayout>
-	<header class="container grid-cols-4 hero mt-20 py-10">
-		<img src="/images/nrq.jpg" alt="Enrique Mendoza" class="col-start-1 col-end-3 self-top justify-self-end rounded-full justify-end w-full max-w-[16rem] max- mt-15 translate-x-8 -z-1">
-		<h1 class="col-start-3 col-span-2 flex flex-col items-start gap-1 lowercase font-display text-[12vw] leading-[0.75] mix-blend-soft-light -translate-x-2">
-			<span class="">Enrique</span>
+	<header class="container grid-cols-4 lg:gap-8 hero mt-20 py-10">
+		<img src="/images/nrq.jpg" alt="Enrique Mendoza" class="col-start-1 col-end-3 self-top justify-self-end rounded-full justify-end w-full max-w-[16rem] max- mt-15 translate-x-8 sm:translate-x-[4vw] lg:translate-x-16 -z-1">
+		<h1 class="col-start-3 col-span-2 flex flex-col items-start gap-1 lowercase font-display text-[min(12vw,6rem)] leading-[0.8] mix-blend-soft-light -translate-x-2">
+			 <span class="">Enrique</span>
 			 <span class="">Mendoza</span> <!-- -translate-x-[26px] -->
 			 <span class="">Frontend</span>
 			 <span class="">Developer</span>
 		</h1>
-		<div class="col-span-full flex gap-6 flex-col items-start mt-10">
-			<p class="text-justify text-2xl tracking-[-0.062rem] indent-[16vw]">Hello, I'm a web developer specializing in frontend crafting web-based experiences since 2010 — living in Mexico City, working remote.</p>
+		<div class="col-span-full sm:col-span-3 flex gap-6 flex-col items-start mt-10 sm:mt-16 lg:mt-8 lg:col-span-2">
+			<p class="text-justify text-2xl tracking-[-0.062rem] indent-[min(16vw,8rem)]">Hello, I'm a web developer specializing in frontend crafting web-based experiences since 2010 — living in Mexico City, working remote.</p>
 			<p class="self-end"><a href="mailto:info@nrq.me" data-href="/contact" class="btn underline underline-offset-6 text-xl">Let's create!</a></p>
 		</div>
 	</header>
@@ -103,13 +103,12 @@ const latestWorks = [
     	<!-- <a href="/works">Show more</a> -->
   	</header>
   	<p class="mb-8">Click on the image to see my work in action, it will open in a new tab.</p>
-  	<div class="works_list grid gap-6 md:grid-cols-2">
+  	<div class="works_list grid gap-8 md:grid-cols-2">
     	{ latestWorks.map((work) => (
     		<a href={ work.url } target="_blank" rel="external nofollow" class="block">
     			<figure>
     				<img src={ work.imgSrc } alt="FloorMuffler">
-						<figcaption class="flex justify-between mt-1">
-    					<h3>{ work.name }</h3>
+						<figcaption class="flex justify-between mt-2 text-lg">{ work.name }</h3>
     					<time datetime={ work.releaseDate }>{ work.releaseDate?.substring(0, 4) }</time>
 						</figcaption>
     			</figure>
@@ -118,18 +117,18 @@ const latestWorks = [
   	</div>
 	</section>
 	
-	<section class="container about pt-10 pb-15">
-  	<header class="mb-8">
+	<section class="container about gap-8 grid-cols-4 pt-10 pb-20">
+  	<header class="col-span-full">
     	<h2 class="subheading">About</h2>
     	<!-- <a href="/about">Show more</a> -->
   	</header>
-  	<div>
-  		<p class=" text-3xl text-justify mb-8">I collaborate with businesses of all sizes worldwide, implementing cutting-edge technologies.</p>
-			<figure class="mb-8">
+  	<div class="col-span-full grid grid-cols-subgrid">
+  		<p class="col-span-full md:col-span-3 text-3xl text-justify mb-8">I collaborate with businesses of all sizes worldwide, implementing cutting-edge technologies.</p>
+			<figure class="col-span-full max-sm:mb-8 sm:mt-5.5 sm:col-span-3 md:col-span-2">
   			<img src="/images/nrq-at-cherrybomb.jpg" alt="Enrique Mendoza at Cherry Bomb" class="w-full">
-				<figcaption>*le me at <a href="https://cherrybomb.com.mx">Cherry Bomb</a>*</figcaption>
+				<figcaption class="mt-2">*le me at <a href="https://cherrybomb.com.mx">Cherry Bomb</a>*</figcaption>
 			</figure>
-  		<p class="text-lg">I'm dedicated to building beautiful highly functional web solutions, to achieve my clients' unique needs and long-term goals.</p>
+  		<p class="col-span-full sm:col-start-2 sm:col-span-2 sm:self-center md:col-start-3 text-lg">I'm dedicated to building beautiful highly functional web solutions, to achieve my clients' unique needs and long-term goals.</p>
   	</div>
 	</section>
 </BaseLayout>
